@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+  <link rel="icon" href="favicon.png" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+  <link rel="stylesheet" type="text/css" href="build/tailwind.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+  <link rel="stylesheet" href="https://use.typekit.net/ggk0vlq.css">
+  <title>Blue Chips</title>
+</head>
+
+<!------------ Sidebar -------------->
+<body>
+<div id="app" class="p-10">
+  <h1 class="text-3xl">DeFi Essentials</h1>
+  <ul>
+    <div class='flex flex-wrap'>
+<li class="w-64 h-64 m-2 shadow-lg hover:shadow-xl hover:pointer rounded-lg p-4" v-for="(value, name) in body">
+  <img :src="'/img/' + name + '.png'" v-bind:alt="pic" class="h-8" >
+  <h2 class="text-3xl"> {{name}} </h2>
+  <p class="text-light text-3xl text-gray-800"> ${{value.usd}}</p>
+  <p class="text-gray-600"> mcap ${{Math.floor(value.usd_market_cap / 1000000)}}M</p>
+</li>
+
+  </ul>
+</div>
+
+
+
+
+<!---- 
+ethereum,lend,yearn-finance,balancer,polkadot,synthetix-network-token,nexus-mutual,loopring,bzx-protocol,
+-->
+</div>
+<script src="js/index.js"></script>
+</body>
+</html>
