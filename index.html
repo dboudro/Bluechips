@@ -19,7 +19,7 @@
   <ul>
     <div class='flex flex-wrap'>
 <li class="w-64 h-64 m-2 shadow-lg hover:shadow-xl hover:pointer rounded-lg p-4" v-for="(value, name) in body">
-  <img :src="'./img/' + name + '.png'" v-bind:alt="pic" class="h-8" >
+  <img :src="'img/' + name + '.png'" v-bind:alt="pic" class="h-8" >
   <h2 class="text-3xl"> {{name}} </h2>
   <p class="text-light text-3xl text-gray-800"> ${{value.usd}}</p>
   <p class="text-gray-600"> mcap ${{Math.floor(value.usd_market_cap / 1000000)}}M</p>
